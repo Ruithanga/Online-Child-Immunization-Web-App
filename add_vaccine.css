@@ -1,0 +1,28 @@
+body{
+    font-family: 'lato',sans-serif;
+    background-size: cover;
+    position: fixed;
+    background-image: url('images/vacc.jpg');
+}
+.div{
+    padding: 20;
+    font-size: 20;
+}
+.text{
+    background-color: #c2d6d6;
+    border: none;
+    padding: 9px 10px;
+}
+.container{
+    position: absolute;
+    margin: 22px 50px 50px 600px;
+    padding: 70;
+    background-color:#1A5276;
+    font-family: Century Gothic;
+}
+
+input[type='submit']{
+    width: 100px;
+    height: 35px;
+    border-radius: 50px 50px 50px 50px;
+}

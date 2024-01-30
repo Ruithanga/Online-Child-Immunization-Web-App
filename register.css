@@ -1,0 +1,65 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    background-image: url('images/vacc.jpg');
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #3498db; /* Background color for the page */
+}
+
+.registration-container {
+    text-align: center;
+    background-color: #A9CCE3; /* Background color for the registration container */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    max-width: 400px; /* Limit the width for a smartphone-like appearance */
+    margin: 0 auto; /* Center the container */
+}
+
+h2 {
+    color: #333;
+}
+
+.registration-container img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    margin-bottom: 20px;
+}
+
+form {
+    display: inline-block;
+    text-align: left;
+}
+
+label, select, input, button {
+    display: block;
+    margin-bottom: 10px;
+    width: 100%; /* Make inputs full-width */
+}
+
+.form-links {
+    margin-bottom: 15px;
+}
+
+a {
+    text-decoration: none;
+    color: #007BFF;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #2ecc71; /* Button color */
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #27ae60; /* Button color on hover */
+}
