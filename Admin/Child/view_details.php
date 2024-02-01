@@ -1,4 +1,12 @@
 <?php
+
+session_start();
+if (!isset($_SESSION['user_id'])) {
+    header("location:/../../login.php");
+}
+
+$user_id = $_SESSION['user_id'] ;
+
 include '../../connection.php';
 ?>
 
@@ -14,6 +22,7 @@ include '../../connection.php';
     table,tr,td,th{border: solid;border-collapse: collapse;border-spacing:1px}
 </style>
 <body class="bg-dark">
+<?php include '../../header.php';?>
     <div class="table-responsive">
         <table class="table  border table-bordered table-striped">
             <thead>
@@ -24,16 +33,17 @@ include '../../connection.php';
                 </th>
             </tr>
             <tr>
-                <td>child id</td>
+                <td>#</td>
                 <td>child Name</td>
                 <td>Date of birth</td>
+                <td>age</td>
                 <td>Height</td>
                 <td>Weight</td>
                 <td>Gender</td>
                 <td>Email Address</td>
-                <td>Mother's Name</td>
-                <td>Father's Name</td>
-                <td>Phone No</td>
+                <td>Mothers Name</td>
+                <td>Fathers Name</td>
+                <td>Phone Number</td>
             </tr>
             </thead>
             <tbody>
@@ -46,13 +56,14 @@ include '../../connection.php';
                 <tr>
                     <th><?php echo $childsdata['id'] ?></th>
                     <th><?php echo $childsdata['full_name'] ?></th>
-                    <th><?php echo $childsdata['age'] ?></th>
                     <th><?php echo $childsdata['dob'] ?></th>
+                    <th><?php echo $childsdata['age'] ?></th>
                     <th><?php echo $childsdata['height'] ?></th>
                     <th><?php echo $childsdata['weight'] ?></th>
-                    <th><?php echo $childsdata['phone'] ?></th>
-                    <th><?php echo $childsdata['phone'] ?></th>
-                    <th><?php echo $childsdata['phone'] ?></th>
+                    <th><?php echo $childsdata['gender'] ?></th>
+                    <th><?php echo $childsdata['email'] ?></th>
+                    <th><?php echo $childsdata['mothers_name'] ?></th>
+                    <th><?php echo $childsdata['fathers_name'] ?></th>
                     <th><?php echo $childsdata['phone'] ?></th>
 
                 </tr>

@@ -1,4 +1,7 @@
 body{
+    display: flex;
+    flex-direction: column;
+    justify-content: center; align-items: center;
     font-family: 'lato',sans-serif;
     background-size: cover;
     position: fixed;

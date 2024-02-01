@@ -1,13 +1,12 @@
 <?php
-
-include '../connection.php';
 session_start();
+include '../connection.php';
+
 //if(!isset($_SESSION['user_id'])){
 //    header("location:/../../index.php");
 //}
-$username = $_SESSION['username'] ;
-$user_id = $_SESSION['user_id'] ;
 
+$user_id = $_SESSION['user_id'];
 if(isset($_POST["add_child_details"])) {
     $full_name = $_POST['full_name'];
     $dob = $_POST['dob'];
@@ -47,57 +46,6 @@ if(isset($_POST["add_child_details"])) {
             session_start();
             $_SESSION['status'] = 'Something went wrong';
             header("location:index.php");
-        }
-
-    }
-
-}
-if(isset($_POST["addvaccine"])) {
-    $vaccine = $_POST['vaccine'];
-    if ($vaccine == "") {
-        session_start();
-        $_SESSION['status'] = 'All inputs are required';
-        header("location:index.php");
-    }
-    else {
-        $save = "insert into c_vaccines(vaccine,user_id) values('$vaccine',$user_id)";
-        $res = mysqli_query($conn, $save);
-        if ($res) {
-            session_start();
-            $_SESSION['status'] = 'Vaccine  added Successfully';
-            header("location:vaccine/index.php");
-        }
-
-        else {
-            session_start();
-            $_SESSION['status'] = 'Something went wrong';
-            header("location:vaccine/index.php");
-        }
-
-    }
-
-}
-if(isset($_POST["shedule_vaccine"])) {
-    $vaccine = $_POST['vaccine'];
-    $date = $_POST['date'];
-    if ($vaccine == "") {
-        session_start();
-        $_SESSION['status'] = 'All inputs are required';
-        header("location:index.php");
-    }
-    else {
-        $save = "insert into c_schedules(vaccine,date,user_id) values('$vaccine','$date',$user_id)";
-        $res = mysqli_query($conn, $save);
-        if ($res) {
-            session_start();
-            $_SESSION['status'] = 'Scheduled successfully';
-            header("location:vaccine/scheduling.php");
-        }
-
-        else {
-            session_start();
-            $_SESSION['status'] = 'Something went wrong';
-            header("location:vaccine/index.php");
         }
 
     }

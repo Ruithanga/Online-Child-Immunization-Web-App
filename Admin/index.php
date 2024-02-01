@@ -1,6 +1,10 @@
 <?php
 session_start();
+if(!isset($_SESSION['user_id'])){
+    header("location:../login.php");
+}
 ?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -16,7 +20,7 @@ session_start();
     if(isset($_SESSION['status'])){
         ?>
         <div>
-            <p class="text-white bg-danger btn-danger p-2"><?php echo $_SESSION['status']; ?> ?</p>
+            <p style="font-size: 23px; background-color: #2ecc71;padding: 1rem; text-transform: uppercase;" class="text-white bg-danger btn-danger p-2"><?php echo $_SESSION['status']; ?> ?</p>
         </div>
         <?php
         unset($_SESSION['status']);
@@ -34,8 +38,8 @@ session_start();
                 <br>View Child Details</div></a>
         <a href= "vaccine/index.php"><div class="btn"><img src="images/avatar.jpg" />
                 <br>Add Vaccine</div></a>
-        <a href= "vaccine/allocate_vaccine.php"><div class="btn"><img src="images/avatar.jpg" />
-                <br>Allocate Vaccine</div></a>
+        <a href= "vaccine/scheduling.php"><div class="btn"><img src="images/avatar.jpg" />
+                <br>Immunization Schedule</div></a>
 
 </div>
 </body>

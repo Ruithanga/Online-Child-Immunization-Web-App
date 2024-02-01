@@ -1,7 +1,8 @@
 <?php
 session_start();
-
-
+if(!isset($_SESSION['user_id'])){
+    header("location:/../../login.php");
+}
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -20,7 +21,7 @@ session_start();
        if(isset($_SESSION['status'])){
            ?>
            <div>
-               <p style="background-color: yellow;" class=""><?php echo $_SESSION['status']; ?> ?</p>
+               <p style="background-color: white; color: white;" class=""><?php echo $_SESSION['status']; ?> ?</p>
            </div>
            <?php
            unset($_SESSION['status']);
@@ -29,10 +30,7 @@ session_start();
     <form action="../adminprocessor.php" method="post">
         <label for="full_name">Full Name:</label>
         <input type="text" name="full_name" required>
-        
-        <label for="age">Age:</label>
-        <input type="number" name="age" placeholder="Months/Years" required>
-        
+
         <label for="dob">Date of Birth:</label>
         <input type="date" name="dob" required>
         
@@ -47,10 +45,15 @@ session_start();
             <option value="female">Female</option>
             <option value="male">Male</option>
         </select>
-        
+        <label for="full_name">Mother's Name:</label>
+        <input type="text" name="mother_name" required>
+
+        <label for="full_name">Father's Name:</label>
+        <input type="text" name="father_name" required>
+
         <label for="parent/guardian_email">Email Address:</label>
         <input type="email" name="email" required>
-        
+
         <label for="phone_number">Phone Number:</label>
         <input type="tel" name="phone_number" pattern="[0-9]{10}" placeholder="Enter 10-digit phone number" required>
         

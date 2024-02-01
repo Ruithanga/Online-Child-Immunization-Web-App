@@ -12,8 +12,9 @@
     <div  class="nav">
         <a href="/login.php">Login</a>
         <a href="/register.php">Register</a>
-        <a href="/Admin/index.php">Admin</a>
-        <a href="/Parent/index.php">Parent</a>
-        <a href="profile.php">Profile</a>
+        <a href="/Admin/index.php">DAshboard1</a>
+        <a href="/Parent/index.php">dashboard 2</a>
+        <a href="/profile.php">Profile</a>
+        <a href="/logout.php">LogOut</a>
     </div>
 </div>
