@@ -40,13 +40,13 @@ if(isset($_POST["add_child_details"])) {
         if ($res) {
             session_start();
             $_SESSION['status'] = 'Child details added Successfully';
-            header("location:index.php");
+            header("location:Child/index.php");
         }
 
         else {
             session_start();
             $_SESSION['status'] = 'Something went wrong';
-            header("location:index.php");
+            header("location:Child/index.php");
         }
 
     }

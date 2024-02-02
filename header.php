@@ -1,20 +1,47 @@
+
+
+    <div class="head">
+        <h5>
+            <a href="/">CHILD IMMUNIZATION</a>
+        </h5>
+        <nav>
+            <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="about.php">About</a></li>
+                <li><a href="/Admin/index.php">A_Dashboard</a></li>
+                <li><a href="/Parent/index.php">U_Dashboard</a></li>
+                <li><a href="profile.php">Dashboard</a></li>
+                <li><a href="profile.php">Profile</a></li>
+                <li><a href="profile.php">Profile</a></li>
+            </ul>
+        </nav>
+    </div>
 <style>
-    .nav a{
-        text-decoration: none;
+    .head{
+        background:#4287f5;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        padding-top: 0.5rem;
+        padding-bottom: 0.5rem;
         color: white;
-        padding: 4px;
-        background-color: #0056b3;
-        text-transform: uppercase;
+    }
+    ul{
+        display: flex;
+        list-style: none;
+        font-size: 23px;
+
+    }
+    ul li{
+
+        margin-right:10px;
+    }
+    ul li a,h5 a{
+        padding: 1rem;
+        color: white;
+        text-decoration: none;
+    }
+    ul li a:hover{
+        background-color:#bcc5cc;
     }
 </style>
-<div style="display: flex;width:100%; background-color: #27ae60; font-size: 23px; padding-right: 1rem; padding-left: 1rem; align-items: center;justify-content: space-between;" class="head">
-    <p>cis</p>
-    <div  class="nav">
-        <a href="/login.php">Login</a>
-        <a href="/register.php">Register</a>
-        <a href="/Admin/index.php">DAshboard1</a>
-        <a href="/Parent/index.php">dashboard 2</a>
-        <a href="/profile.php">Profile</a>
-        <a href="/logout.php">LogOut</a>
-    </div>
-</div>

@@ -5,22 +5,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ONLINE POST_NATAL CARE</title>
     <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="Home.css">
 </head>
 <body>
-<?php include'header.php'; ?>
+<div class="">
+    <?php include'header.php'; ?>
+</div>
     <header>
-        <div class="wrapper">
-            <ul class="nav-area">
-                <li><a href="#">Home</a></li>
-                <li><a href="#" onclick="redirectToLogin()">Log in</a></li>
-                <li><a href="#" onclick="redirectToRegister()">Register</a></li>
-            </ul>
-        </div>
+
         <div class="welcome-message">
             <button class="btn btn-primary">Get Started </button>
             <h1>Welcome to Our Child Immunization System</h1>
             <p>Ensuring the Health and Well-being of Every Child</p>
         </div>
+        <div class=""></div>
     </header>
 
     <script>

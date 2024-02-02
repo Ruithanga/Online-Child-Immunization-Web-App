@@ -17,6 +17,7 @@ $user_id = $_SESSION['user_id'] ;
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../../add_vaccine.css">
     <title>Add Vaccine</title>
+    <link rel="stylesheet" href="/css/style.css">
 </head>
 <body>
 
@@ -56,7 +57,7 @@ if(isset($_SESSION['status'])){
             <td>#</td>
             <td>Vaccine Name </td>
             <td>Date of Administering</td>
-            <td>Operations</td>
+            <td colspan="2">Operations</td>
 
         </tr>
         </thead>
@@ -71,7 +72,7 @@ if(isset($_SESSION['status'])){
                 <th><?php echo $childsdata['id'] ?></th>
                 <th><?php echo $childsdata['vaccine'] ?></th>
                 <th><?php echo $childsdata['date'] ?></th>
-                <td><button class="btn btn-primary">Send Reminder</button></td>
+                <td><button class="btn btn-danger">Send Reminder</button></td>
                 <td><button class="btn btn-primary">View </button></td>
 
             </tr>
@@ -117,6 +118,7 @@ if(isset($_SESSION['status'])){
         display:none;
     }
     .form{
+
         border: 1px solid;
         width:30rem;
         display: flex;justify-content: center;
