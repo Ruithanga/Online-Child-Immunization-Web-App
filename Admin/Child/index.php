@@ -61,8 +61,9 @@ if(!isset($_SESSION['user_id'])){
                        <th><?php echo $childsdata['full_name'] ?></th>
                        <th><?php echo $childsdata['dob'] ?></th>
                        <th><?php echo $childsdata['age'] ?></th>
-                       <th><button onclick="editChildDetails(<?php json_encode($childsdata);?>" class="btn btn-secondary">Edit</button></th>
-                       <th><a href=""><button class="btn btn-primary">More Info</button></a></th>
+                       <th>
+                           <a href="more_info.php?id=<?php echo $childsdata['id']; ?>&name=abu" onclick="editChildDetails(<?php echo $childsdata['id']; ?>)" class="btn btn-secondary">Edit</a>
+                       </th>
 
                    </tr>
                    <?php
@@ -123,24 +124,16 @@ if(!isset($_SESSION['user_id'])){
            </div>
        </div>
 
-       <?php
-       if(isset($_SESSION['status'])){
-           ?>
-           <div>
-               <p style="background-color: white; color: white;" class=""><?php echo $_SESSION['status']; ?> ?</p>
-           </div>
-           <?php
-           unset($_SESSION['status']);
-       }
-       ?>
+
 
    </div>
 
 <script>
     function editChildDetails($childData) {
-      const data = $childData
-        alert(data)
+        const parsedData = $childData.value;
+console.log(parsedData);
     }
+
 
 </script>
 </body>
