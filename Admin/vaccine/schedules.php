@@ -51,6 +51,8 @@ if(isset($_SESSION['status'])){
                 <th colspan="7" class="">
                     <div   class="text-center text-uppercase">
                        All Schedules
+                        <button data-bs-toggle="modal" data-bs-target="#exampleModal" style="background-color: #007BFF; float: end;" class="btn btn-primary">Add Period</button>
+
                     </div>
                 </th>
             </tr>
@@ -98,7 +100,7 @@ if(isset($_SESSION['status'])){
                         <th><?php echo $item['acronym'] ?></th>
                         <th><?php echo $item['description'] ?></th>
                         <th><?php echo $item['period'] ?></th>
-                        <td><a href="more_info.php?id=<?php echo $item['id']; ?>" class="btn btn-secondary">Edit Schedules</a></td>
+                        <td><a href="more_info.php?id=<?php echo $item['id']; ?>" class="btn btn-secondary">More info</a></td>
                         <td><a href="../reminders.php?id=<?php echo $item['id']; ?>" class="btn btn-primary">Reminders</a></td>
                     </tr>
                     <?php
@@ -116,29 +118,33 @@ if(isset($_SESSION['status'])){
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h1 class="modal-title fs-5" id="exampleModalLabel">Schedule Immmunization</h1>
+                    <h1 class="modal-title fs-5" id="exampleModalLabel">Period for Single vaccines</h1>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
                     <form action="../adminprocessor.php" method="Post">
                      <div class="form-group">
-                         <label>Acronym </label>
-                         <input type="text" class="form-control" name="acronym" value="">
+                         <label>Vaccine Name </label>
+                         <select name="vaccine_id" class="form-control">
+                             <?php
+                             $childs = "SELECT * FROM c_vaccines";
+                             $childsrun = mysqli_query($conn, $childs);
+                             while ($childsdata = mysqli_fetch_assoc($childsrun)) {
+                                 ?>
+                             <option value="<?php echo $childsdata['id']?>"><?php echo $childsdata['vaccine']?></option>
+                             <?php
+                                }
+                             ?>
+                         </select>
+                     </div>
+                     <div class="form-group">
+                         <label>Period in Days </label>
+                         <input type="nuber" class="form-control" name="period" value="">
                      </div>
 
-                        <label><b></b>Vaccine Name</label>
-
-                        <input type="text" class="form-control" name="vaccine" value="">
-
-                        <label><b></b>Description</label>
-
-                        <input type="text" class="form-control" name="description" value="">
-
-                        <label><b>Date</b></label></br>
-                        <input type="date" class="form-control" name="date" value="">
-
-                        <input type="submit" class="btn float-end mt-3 btn-primary" name="shedule_vaccine" value="Shedule"/>
-                    </form>            </div>
+                        <input type="submit" class="btn float-end mt-3 btn-primary" name="schedule_period" value="Shedule"/>
+                    </form>
+                </div>
             </div>
         </div>
     </div>

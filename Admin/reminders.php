@@ -20,49 +20,54 @@ $vaccine_id = $_GET['id'] ;
 
 <?php include '../header.php'; ?>
 
-<div class="">
-    <?php
-    if(isset($_SESSION['status'])){
-        ?>
-        <div>
-            <p style="font-size: 23px; background-color: #2ecc71;padding: 1rem; text-transform: uppercase;" class="text-white bg-danger btn-danger p-2"><?php echo $_SESSION['status']; ?> ?</p>
-        </div>
+<div class="container">
+    <div class="">
         <?php
-        unset($_SESSION['status']);
-    }
-    ?>
-<p>Upcoming Reminders</p>
-    <table class="table  border table-bordered table-striped">
-        <thead>
-
-        <tr>
-            <td>#</td>
-            <td>Age bracket in days</td>
-            <td>Operation</td>
-
-        </tr>
-        </thead>
-        <tbody>
-        <?php
-        $childs= "SELECT * FROM c_vaccines join c_schedules on c_vaccines.id=c_schedules.vaccine_id";
-        $childsrun = mysqli_query($conn, $childs);
-
-        while ($childsdata = mysqli_fetch_assoc($childsrun)) {
+        if(isset($_SESSION['status'])){
             ?>
-            <tr>
-                <th><?php echo $childsdata['id'] ?></th>
-                <th><?php echo $childsdata['period'] ?></th>
-                <td><a href="more_info.php?id=<?php echo $childsdata['id']; ?>" class="btn btn-primary">Send Reminders</a></td>
-
-            </tr>
+            <div>
+                <p style="font-size: 23px; background-color: #2ecc71;padding: 1rem; text-transform: uppercase;" class="text-white bg-danger btn-danger p-2"><?php echo $_SESSION['status']; ?> ?</p>
+            </div>
             <?php
+            unset($_SESSION['status']);
         }
         ?>
-        </tbody>
-        </tbody>
+        <p>Upcoming Reminders for message </p>
 
-    </table>
+        <table class="table  border table-bordered table-striped">
+            <thead>
 
+            <tr>
+                <td>#</td>
+                <td>Age bracket in days</td>
+                <td>Status</td>
+                <td>Operation</td>
+
+            </tr>
+            </thead>
+            <tbody>
+            <?php
+            $childs= "SELECT * FROM c_vaccines join c_schedules on c_vaccines.id=c_schedules.vaccine_id";
+            $childsrun = mysqli_query($conn, $childs);
+
+            while ($childsdata = mysqli_fetch_assoc($childsrun)) {
+                ?>
+                <tr>
+                    <th><?php echo $childsdata['id'] ?></th>
+                    <th><?php echo $childsdata['period'] ?></th>
+                    <th>not yet send</th>
+                    <td><a href="more_info.php?id=<?php echo $childsdata['id']; ?>" class="btn btn-primary">Send Reminders</a></td>
+
+                </tr>
+                <?php
+            }
+            ?>
+            </tbody>
+            </tbody>
+
+        </table>
+
+    </div>
 </div>
 
 

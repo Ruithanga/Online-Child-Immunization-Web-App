@@ -50,7 +50,7 @@ if(isset($_SESSION['status'])){
             <tr>
                 <th colspan="7" class="">
                     <div style="display: flex;justify-content: space-between;"  class=" d-flex align-items-center justify-content-between">
-                        Vaccines vaccines
+                        Vaccines
                         <button data-bs-toggle="modal" data-bs-target="#exampleModal" style="background-color: #007BFF; float: end;" class="btn btn-primary">Add Vaccine</button>
                     </div>
                 </th>
@@ -91,7 +91,7 @@ if(isset($_SESSION['status'])){
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h1 class="modal-title fs-5" id="exampleModalLabel">Schedule Immmunization</h1>
+                    <h1 class="modal-title fs-5" id="exampleModalLabel">Vaccine Records</h1>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
@@ -112,8 +112,9 @@ if(isset($_SESSION['status'])){
                         <label><b>Date</b></label></br>
                         <input type="date" class="form-control" name="date" value="">
 
-                        <input type="submit" class="btn float-end mt-3 btn-primary" name="shedule_vaccine" value="Shedule"/>
-                    </form>            </div>
+                        <input type="submit" class="btn float-end mt-3 btn-primary" name="shedule_vaccine" value="Add"/>
+                    </form>
+                </div>
             </div>
         </div>
     </div>

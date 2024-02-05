@@ -50,7 +50,7 @@ if(isset($_SESSION['status'])){
             <tr>
                 <th colspan="7" class="">
                     <div style="display: flex;justify-content: space-between;"  class=" d-flex align-items-center justify-content-between">
-                        Vaccines vaccines
+                        Periods of Vaccines
                         <button data-bs-toggle="modal" data-bs-target="#exampleModal" style="background-color: #007BFF; float: end;" class="btn btn-primary">Add Period</button>
                     </div>
                 </th>
@@ -77,7 +77,7 @@ if(isset($_SESSION['status'])){
                     <th><?php echo $childsdata['acronym'] ?></th>
                     <th><?php echo $childsdata['description'] ?></th>
                     <th><?php echo $childsdata['period'] ?></th>
-                    <td><a href="schedules.php?id=<?php echo $childsdata['id']; ?> class="btn btn-primary">View Shedules</a></td>
+                    <td><a href="schedules.php" class="btn btn-primary">View Shedules</a></td>
 
                 </tr>
                 <?php

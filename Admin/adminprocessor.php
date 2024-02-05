@@ -151,6 +151,9 @@ if(isset($_POST["shedule_vaccine"])) {
 if(isset($_POST["schedule_period"])) {
     $period= $_POST['period'];
     $vaccine_id = $_POST['vaccine_id'];
+//    echo $vaccine_id;
+//    echo $period;
+//    die();
     if ($period == "") {
         session_start();
         $_SESSION['status'] = 'Period is required';
