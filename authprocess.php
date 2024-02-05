@@ -62,7 +62,7 @@ if (isset($_POST['login'])) {
     $query = mysqli_query($conn, $sql);
     $count = mysqli_num_rows($query);
 
-    if ($count == 1) {``
+    if ($count == 1) {
         $find = "select * from c_users where email='$email'";
         $retrieve = mysqli_query($conn, $find);
         $users = mysqli_fetch_all($retrieve, MYSQLI_ASSOC);

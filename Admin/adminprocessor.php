@@ -12,11 +12,6 @@ if(isset($_POST["add_child_details"])) {
     $full_name = $_POST['full_name'];
     $dob = $_POST['dob'];
     $today = new DateTime('today');
-    $dobDate = new DateTime($dob);
-
-    $interval = $today->diff($dobDate);
-    $months = ($interval->y * 12) + $interval->m;
-
     $email = $_POST['email'];
     $height = $_POST['height'];
     $mother_name = $_POST['mother_name'];
@@ -35,7 +30,7 @@ if(isset($_POST["add_child_details"])) {
         header("location:index.php");
     }
     else {
-        $save = "insert into c_child_details(full_name,mothers_name,fathers_name,age,dob,gender,height,weight,phone,email) values('$full_name','$mother_name','$father_name','$months','$dob','$gender','$height','$weight','$cleaned_phone_number','$email')";
+        $save = "insert into c_child_details(full_name,mothers_name,fathers_name,dob,gender,height,weight,phone,email) values('$full_name','$mother_name','$father_name','$dob','$gender','$height','$weight','$cleaned_phone_number','$email')";
         $res = mysqli_query($conn, $save);
         if ($res) {
             session_start();
@@ -62,6 +57,7 @@ if(isset($_POST["update_child_details"])) {
 
     $interval = $today->diff($dobDate);
     $months = ($interval->y * 12) + $interval->m;
+
 
     $email = $_POST['email'];
     $height = $_POST['height'];
@@ -126,6 +122,8 @@ if(isset($_POST["addvaccine"])) {
 }
 if(isset($_POST["shedule_vaccine"])) {
     $vaccine = $_POST['vaccine'];
+    $acronym = $_POST['acronym'];
+    $description = $_POST['description'];
     $date = $_POST['date'];
     if ($vaccine == "") {
         session_start();
@@ -133,18 +131,44 @@ if(isset($_POST["shedule_vaccine"])) {
         header("location:index.php");
     }
     else {
-        $save = "insert into c_schedules(vaccine,date,user_id) values('$vaccine','$date',$user_id)";
+        $save = "insert into c_vaccines(vaccine,acronym,description,date,user_id) values('$vaccine','$acronym','$description','$date',$user_id)";
         $res = mysqli_query($conn, $save);
         if ($res) {
             session_start();
-            $_SESSION['status'] = 'Scheduled successfully';
-            header("location:vaccine/scheduling.php");
+            $_SESSION['status'] = 'Vaccine added successfully';
+            header("location:vaccine/schedules.php");
         }
 
         else {
             session_start();
-            $_SESSION['status'] = 'Something went wrong';
+            $_SESSION['status'] = 'Something went wrong Try again later';
             header("location:vaccine/index.php");
+        }
+
+    }
+
+}
+if(isset($_POST["schedule_period"])) {
+    $period= $_POST['period'];
+    $vaccine_id = $_POST['vaccine_id'];
+    if ($period == "") {
+        session_start();
+        $_SESSION['status'] = 'Period is required';
+        header("location:index.php");
+    }
+    else {
+        $save = "insert into c_schedules(period,vaccine_id,user_id) values('$period','$vaccine_id',$user_id)";
+        $res = mysqli_query($conn, $save);
+        if ($res) {
+            session_start();
+            $_SESSION['status'] = 'Period  scheduled successfully';
+            header("location:vaccine/schedules.php");
+        }
+
+        else {
+            session_start();
+            $_SESSION['status'] = 'Something went wrong Try again later';
+            header("location:vaccine/schedules.php");
         }
 
     }

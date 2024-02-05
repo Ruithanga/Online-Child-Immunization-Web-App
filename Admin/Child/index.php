@@ -45,7 +45,7 @@ if(!isset($_SESSION['user_id'])){
                    <td>#</td>
                    <td>child Name</td>
                    <td>Date of birth</td>
-                   <td>Age in Months</td>
+                   <td>Age in Days</td>
                    <td colspan="2">Operations</td>
                </tr>
                </thead>
@@ -60,7 +60,15 @@ if(!isset($_SESSION['user_id'])){
                        <th><?php echo $childsdata['id'] ?></th>
                        <th><?php echo $childsdata['full_name'] ?></th>
                        <th><?php echo $childsdata['dob'] ?></th>
-                       <th><?php echo $childsdata['age'] ?></th>
+                       <th>
+                           <?php
+                           $birthdate = new DateTime($childsdata['dob']);
+                            $today = new DateTime();
+                            $interval = $today->diff($birthdate);
+                            $daysSinceBirth = $interval->format('%a');
+                            echo $daysSinceBirth;
+                           ?>
+                       </th>
                        <th>
                            <a href="more_info.php?id=<?php echo $childsdata['id']; ?>&name=abu" onclick="editChildDetails(<?php echo $childsdata['id']; ?>)" class="btn btn-secondary">Edit</a>
                        </th>
