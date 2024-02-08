@@ -27,7 +27,7 @@ include '../../header.php';
 if(isset($_SESSION['status'])){
     ?>
     <div>
-        <p style="padding:1rem;font-size: 23px; background-color: yellow;" class=""><?php echo $_SESSION['status']; ?> ?</p>
+        <p style="padding:1rem;font-size: 23px; background-color: yellow;" class=""><?php echo $_SESSION['status']; ?> !</p>
     </div>
     <?php
     unset($_SESSION['status']);
@@ -61,7 +61,7 @@ if(isset($_SESSION['status'])){
                 <td>Vaccine Name </td>
                 <td>Acronym</td>
                 <td>Description</td>
-                <td>Period</td>
+                <td>Period in days</td>
                 <td colspan="2">Operations</td>
 
             </tr>
@@ -100,7 +100,7 @@ if(isset($_SESSION['status'])){
                         <th><?php echo $item['acronym'] ?></th>
                         <th><?php echo $item['description'] ?></th>
                         <th><?php echo $item['period'] ?></th>
-                        <td><a href="more_info.php?id=<?php echo $item['id']; ?>" class="btn btn-secondary">More info</a></td>
+                        <td><a href="more_info.php?id=<?php echo $item['id']; ?>&&name=<?php echo $item['vaccine']; ?>" class="btn btn-secondary">More info</a></td>
                         <td><a href="../reminders.php?id=<?php echo $item['id']; ?>" class="btn btn-primary">Reminders</a></td>
                     </tr>
                     <?php

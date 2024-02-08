@@ -1,11 +1,10 @@
 <?php
 session_start();
 include '../connection.php';
-if(!isset($_SESSION['user_id'])){
-    header("location:../login.php");
-}
 
-$vaccine_id = $_GET['id'] ;
+
+$vaccine_id = $_GET['vaccine_id'] ;
+$period = $_GET['period'] ;
 ?>
 
 <!DOCTYPE html>
@@ -39,31 +38,40 @@ $vaccine_id = $_GET['id'] ;
 
             <tr>
                 <td>#</td>
-                <td>Period of giving vaccine(days)</td>
-                <td>Status</td>
-                <td>Operation</td>
+                <td>Full Name</td>
+                <td>dob</td>
+                <td>age</td>
 
             </tr>
             </thead>
             <tbody>
             <?php
-            $childs= "SELECT * FROM c_vaccines join c_schedules on c_vaccines.id=c_schedules.vaccine_id where c_vaccines.id=$vaccine_id";
-            $childsrun = mysqli_query($conn, $childs);
+           $sql = "SELECT * FROM  c_child_details ";
+    $result = mysqli_query($conn, $sql);
 
-            while ($childsdata = mysqli_fetch_assoc($childsrun)) {
-                ?>
-                <tr>
-                    <th><?php echo $childsdata['id'] ?></th>
-                    <th><?php echo $childsdata['period'] ?></th>
-                    <th>not yet send</th>
-                    <td>
-                            <a href="reminderprocessor.php?period=<?php echo $childsdata['period'] ?>&&vaccine_id=<?php echo $childsdata['vaccine_id'] ?>"  class="btn btn-primary">Send Reminder</a>
-                    </td>
-
-                </tr>
-                <?php
-            }
-            ?>
+       if (mysqli_num_rows($result) > 0) {
+    // Output data of each row
+    while ($childsdata = mysqli_fetch_assoc($result)) {
+        // Calculate age based on date of birth
+        $dob = strtotime($childsdata['dob']);
+        $age_in_days = floor((time() - $dob) / (60 * 60 * 24));
+        // Output table row
+        ?>
+        <tr>
+            <td><?php echo $childsdata['id'] ?></td>
+            <td><?php echo $childsdata['full_name'] ?></td>
+            <td><?php echo $childsdata['dob'] ?></td>
+            <td><?php echo $age_in_days; ?> days</td>
+            <td>not yet send</td>
+            <td></td>
+        </tr>
+        <?php
+    }
+} else {
+    // If there are no results
+    echo "<tr><td colspan='6'>No records found</td></tr>";
+}
+?>
             </tbody>
             </tbody>
 

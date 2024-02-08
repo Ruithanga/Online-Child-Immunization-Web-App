@@ -128,7 +128,7 @@ if(isset($_POST["shedule_vaccine"])) {
     if ($vaccine == "") {
         session_start();
         $_SESSION['status'] = 'All inputs are required';
-        header("location:index.php");
+        header("location:vaccine/index.php");
     }
     else {
         $save = "insert into c_vaccines(vaccine,acronym,description,date,user_id) values('$vaccine','$acronym','$description','$date',$user_id)";
@@ -136,7 +136,7 @@ if(isset($_POST["shedule_vaccine"])) {
         if ($res) {
             session_start();
             $_SESSION['status'] = 'Vaccine added successfully';
-            header("location:vaccine/schedules.php");
+            header("location:vaccine/index.php");
         }
 
         else {
@@ -151,6 +151,7 @@ if(isset($_POST["shedule_vaccine"])) {
 if(isset($_POST["schedule_period"])) {
     $period= $_POST['period'];
     $vaccine_id = $_POST['vaccine_id'];
+    $vaccine_name = $_POST['vaccine_name'];
 //    echo $vaccine_id;
 //    echo $period;
 //    die();
@@ -164,16 +165,16 @@ if(isset($_POST["schedule_period"])) {
         $res = mysqli_query($conn, $save);
         if ($res) {
             session_start();
-            $_SESSION['status'] = 'Period  scheduled successfully';
-            header("location:vaccine/schedules.php");
+            $_SESSION['status'] = 'Period scheduled successfully';
+            header("location:vaccine/more_info.php?id=$vaccine_id&name=$vaccine_name");
+            exit(); // Add an exit after redirection to prevent further execution
         }
-
         else {
             session_start();
-            $_SESSION['status'] = 'Something went wrong Try again later';
-            header("location:vaccine/schedules.php");
+            $_SESSION['status'] = 'Failed to schedule period';
+            header("location:vaccine/more_info.php?id=$vaccine_id&name=$vaccine_name");
+            exit(); // Add an exit after redirection to prevent further execution
         }
-
     }
 
 }

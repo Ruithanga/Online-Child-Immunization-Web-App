@@ -27,7 +27,7 @@ include '../../header.php';
 if(isset($_SESSION['status'])){
     ?>
     <div>
-        <p style="padding:1rem;font-size: 23px; background-color: yellow;" class=""><?php echo $_SESSION['status']; ?> ?</p>
+        <p style="padding:1rem;font-size: 23px; background-color: yellow;" class=""><?php echo $_SESSION['status']; ?> !</p>
     </div>
     <?php
     unset($_SESSION['status']);
@@ -76,7 +76,7 @@ if(isset($_SESSION['status'])){
                     <th><?php echo $childsdata['vaccine'] ?></th>
                     <th><?php echo $childsdata['acronym'] ?></th>
                     <th><?php echo $childsdata['description'] ?></th>
-                    <td><a href="more_info.php?id=<?php echo $childsdata['id']; ?>&name=<?php echo urlencode($childsdata['description']); ?>" class="btn btn-primary">More ..</a></td>
+                    <td><a href="more_info.php?id=<?php echo $childsdata['id']; ?>&name=<?php echo $childsdata['vaccine']; ?>" class="btn btn-primary">More ..</a></td>
 
                 </tr>
                 <?php
