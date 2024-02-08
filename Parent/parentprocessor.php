@@ -34,7 +34,7 @@ if(isset($_POST["add_child_details"])) {
         header("location:index.php");
     }
     else {
-        $save = "insert into c_child_details(full_name,mothers_name,fathers_name,age,dob,gender,height,weight,phone,email) values('$full_name','$mother_name','$father_name','$months','$dob','$gender','$height','$weight','$cleaned_phone_number','$email')";
+        $save = "insert into c_child_details(full_name,mothers_name,fathers_name,dob,gender,height,weight,phone,email) values('$full_name','$mother_name','$father_name','$dob','$gender','$height','$weight','$cleaned_phone_number','$email')";
         $res = mysqli_query($conn, $save);
         if ($res) {
             session_start();
