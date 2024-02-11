@@ -120,7 +120,7 @@ if(!isset($_SESSION['user_id'])){
                            <input type="email" name="email" required>
 
                            <label for="phone_number">Phone Number:</label>
-                           <input type="tel" name="phone_number" pattern="[0-9]{10}" placeholder="Enter 10-digit phone number" required>
+                           <input type="tel" name="phone_number" pattern="[0-9]{10}" placeholder="eg.0728548760" required>
 
                            <div class="d-flex justify-content-between">
                                <button type="submit" class="" data-bs-dismiss="modal" name="add_child_details">Close</button>

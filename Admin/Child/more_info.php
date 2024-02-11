@@ -83,7 +83,7 @@ foreach ($childsdetails as $childsdetail) {
         <input type="email" name="email"  value="<?php echo $email ?>" required>
 
         <label for="phone_number">Phone Number:</label>
-        <input type="tel" name="phone_number"  value="<?php echo $phone ?>" pattern="[0-9]{10}" placeholder="Enter 10-digit phone number" required>
+        <input type="tel" name="phone_number"  value="<?php echo $phone ?>" placeholder="Enter 10-digit phone number" required>
 
         <div class="d-flex justify-content-between">
         <button type="submit" class="float-end mx-4" name="update_child_details">Update Details</button>

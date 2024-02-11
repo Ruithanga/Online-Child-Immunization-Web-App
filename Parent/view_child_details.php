@@ -55,7 +55,13 @@ include '../connection.php';
                 <th><?php echo $childsdata['id'] ?></th>
                 <th><?php echo $childsdata['full_name'] ?></th>
                 <th><?php echo $childsdata['dob'] ?></th>
-                <th><?php echo $childsdata['age'] ?></th>
+                <th> <?php
+                    $birthdate = new DateTime($childsdata['dob']);
+                    $today = new DateTime();
+                    $interval = $today->diff($birthdate);
+                    $daysSinceBirth = $interval->format('%a');
+                    echo $daysSinceBirth;
+                    ?></th>
                 <th><?php echo $childsdata['height'] ?></th>
                 <th><?php echo $childsdata['weight'] ?></th>
                 <th><?php echo $childsdata['gender'] ?></th>
