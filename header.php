@@ -1,47 +1,52 @@
 
-
-    <div class="head">
-        <h5>
-            <a href="/">CHILD IMMUNIZATION</a>
-        </h5>
-        <nav>
-            <ul>
+    <nav class="navbar text-white top-nav navbar-expand-lg">
+        <div class="container-fluid d-flex flex-row justify-content-between">
+            <a class="navbar-brand text-white" href="/">Child Immunization </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="">
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav list-unstyled">
                 <li><a href="/">Home</a></li>
-                <li><a href="about.php">About</a></li>
-                <li><a href="/Admin/index.php">A_Dashboard</a></li>
-                <li><a href="/Parent/index.php">U_Dashboard</a></li>
-                <li><a href="profile.php">Dashboard</a></li>
-                <li><a href="profile.php">Profile</a></li>
-                <li><a href="profile.php">Profile</a></li>
+                <li><a href="/about_us.php">About Us</a></li>
+                <?php
+
+                if(isset($_SESSION['user_id'])){
+                   if(isset($_SESSION['admin'])){
+                       echo '<li><a href="/Admin/index.php">Dashboard</a></li>';
+                   }
+                   else{
+                       echo '<li><a href="/Parent/index.php">Dashboard</a></li>';
+                   }
+               echo '<li><a href="/profile.php">Profile</a></li>';
+               echo '<li><a href="/logout.php">Logout</a></li>';
+                }
+                else {
+                    echo '<li><a href="/login.php">Login</a></li>';
+                    echo '<li><a href="/register.php">Register</a></li>';
+
+                }
+                ?>
+
             </ul>
-        </nav>
+        </div>
     </div>
-<style>
-    .head{
-        background:#4287f5;
-        display: flex;
-        justify-content: space-around;
-        align-items: center;
-        padding-top: 0.5rem;
-        padding-bottom: 0.5rem;
-        color: white;
-    }
-    ul{
-        display: flex;
-        list-style: none;
-        font-size: 23px;
+</nav>
+    <style>
+        nav{
+            font-size: 20px;
+            background:blueviolet;
+            color: white;
+        }
 
-    }
-    ul li{
+        ul li a{
+            padding: 10px 10px 10px 10px;
+            color: white;
+            text-decoration: none;
+        }
+        ul a:hover{
+            background: blue;
+        }
 
-        margin-right:10px;
-    }
-    ul li a,h5 a{
-        padding: 1rem;
-        color: white;
-        text-decoration: none;
-    }
-    ul li a:hover{
-        background-color:#bcc5cc;
-    }
-</style>
+    </style>

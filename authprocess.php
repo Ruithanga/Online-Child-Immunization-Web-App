@@ -14,7 +14,7 @@ if(isset($_POST["register"])) {
     $otp=rand(999,10000);
     $code='+254';
     $phone=$code.$cleaned_phone_number;
-    $sql2 = "select username from users where email='$email'";
+    $sql2 = "select username from c_users where email='$email'";
     $result2 = mysqli_query($conn, $sql2);
     $count2 = mysqli_num_rows($result2);
     if ($userType == "" || $username == "" || $email == "" || $phone_number == "" || $password == "") {
@@ -76,6 +76,7 @@ if (isset($_POST['login'])) {
 
         if($userType == 'health_Care_Provider'){
             session_start();
+            $_SESSION['user'] = 'admin';
             $_SESSION['username'] = $username;
             $_SESSION['user_id'] = $user_id;
             $_SESSION['status'] = "Welcome back $username;";
@@ -83,6 +84,7 @@ if (isset($_POST['login'])) {
         }
         else{
             session_start();
+            $_SESSION['user'] = 'user';
             $_SESSION['username'] = $username;
             $_SESSION['user_id'] = $user_id;
             $_SESSION['status'] = "Welcome back $username;";

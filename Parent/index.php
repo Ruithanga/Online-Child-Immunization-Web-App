@@ -9,6 +9,10 @@ session_start();
     <title>E-Vaccination System Dashboard</title>
     <link rel="stylesheet" href="/../../Admin_dashboard.css">
     <link rel="stylesheet" href="/../css/style.css">
+
+    <link rel="stylesheet" href="/css/style.css">
+    <script src="/js/main.js"></script>
+
 </head>
 <body>
 <?php include '../header.php';?>
@@ -23,6 +27,7 @@ session_start();
         unset($_SESSION['status']);
     }
     ?>
+
     <label><?php echo $_SESSION['username'];?></label>
 
     <a href="/auth/logout.php">Logout</a>

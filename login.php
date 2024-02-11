@@ -1,13 +1,29 @@
+<?php
+session_start();?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>E-Vaccination System</title>
+    <title>Login</title>
     <link rel="stylesheet" href="login.css">
+
+    <link rel="stylesheet" href="/css/style.css">
+    <script src="/js/main.js"></script>
 </head>
 <body>
+<?php include 'header.php'; ?>
     <div class="login-container">
+        <?php
+        if(isset($_SESSION['status'])){
+            ?>
+            <div>
+                <p style="font-size: 23px; background-color: #2ecc71;padding: 1rem; text-transform: uppercase;" class="text-white bg-danger btn-danger p-2"><?php echo $_SESSION['status']; ?> ?</p>
+            </div>
+            <?php
+            unset($_SESSION['status']);
+        }
+        ?>
         <h2>E-Vaccination System</h2>
         <img src="images/syrige.jpg" alt="Profile Image">
 
