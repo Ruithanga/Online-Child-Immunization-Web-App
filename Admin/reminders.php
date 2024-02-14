@@ -32,7 +32,7 @@ $vaccine_id = $_GET['id'] ;
             unset($_SESSION['status']);
         }
         ?>
-        <p>Upcoming Reminders for message </p>
+        <p>Upcoming Reminders for message .....<? echo $vaccine_id; ?> </p>
 
         <table class="table  border table-bordered table-striped">
             <thead>

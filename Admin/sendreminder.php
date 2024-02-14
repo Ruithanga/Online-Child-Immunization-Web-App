@@ -9,7 +9,7 @@ $phone = $_GET['phone'] ;
 $child_id = $_GET['child_id'] ;
 
     $curl = curl_init();
-    $message ="We are reminding you that it is only one week remaining for your child immmunization. Get prepared for it do not forget to .Your childs health is your wealth. Regards childs Immunization system #Developer @Freemano";
+    $message ="We are reminding you that it is only one week remaining for your child immmunization. Get prepared for it do not forget to .Your childs health is your wealth. Regards childs Immunization system.";
     $data = array(
         'api_token' => $api_token,
         'from' => $from,

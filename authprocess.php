@@ -14,15 +14,16 @@ if(isset($_POST["register"])) {
     $otp=rand(999,10000);
     $code='+254';
     $phone=$code.$cleaned_phone_number;
-    $sql2 = "select username from c_users where email='$email'";
-    $result2 = mysqli_query($conn, $sql2);
-    $count2 = mysqli_num_rows($result2);
+
     if ($userType == "" || $username == "" || $email == "" || $phone_number == "" || $password == "") {
         session_start();
         $_SESSION['status'] = 'All inputs are required';
         header("location:register.php");
     }
     else {
+        $sql2 = "select username from c_users where email='$email'";
+        $result2 = mysqli_query($conn, $sql2);
+        $count2 = mysqli_num_rows($result2);
         if ($count2 > 0) {
             session_start();
             $_SESSION['status'] = 'Email already exist use a new email';

@@ -40,9 +40,9 @@ $early_period=$period-7;
             <tr>
                 <th>#</th>
                 <th>Full Name</th>
-                <th>dob</th>
-                <th>Mothers name</th>
+                <th>Mothers Name</th>
                 <th>Fathers name</th>
+                <th>Phone number</th>
                 <th>Age In Days</th>
                 <th>Operation</th>
 

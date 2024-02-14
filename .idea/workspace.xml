@@ -1,7 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="8dfc4df3-34f6-4b3c-a44e-96fcb3aaa1d6" name="Changes" comment="" />
+    <list default="true" id="8dfc4df3-34f6-4b3c-a44e-96fcb3aaa1d6" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Admin/reminderprocessor.php" beforeDir="false" afterPath="$PROJECT_DIR$/Admin/reminderprocessor.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Admin/reminders.php" beforeDir="false" afterPath="$PROJECT_DIR$/Admin/reminders.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Admin/sendreminder.php" beforeDir="false" afterPath="$PROJECT_DIR$/Admin/sendreminder.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/authprocess.php" beforeDir="false" afterPath="$PROJECT_DIR$/authprocess.php" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -69,7 +75,13 @@
       <workItem from="1707536563323" duration="1440000" />
       <workItem from="1707541740107" duration="473000" />
       <workItem from="1707617286706" duration="5796000" />
-      <workItem from="1707667523163" duration="1370000" />
+      <workItem from="1707667523163" duration="2290000" />
+      <workItem from="1707717545836" duration="685000" />
+      <workItem from="1707768197244" duration="381000" />
+      <workItem from="1707798338160" duration="1251000" />
+      <workItem from="1707852370230" duration="518000" />
+      <workItem from="1707856811941" duration="215000" />
+      <workItem from="1707893974600" duration="440000" />
     </task>
     <servers />
   </component>
@@ -95,7 +107,7 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="php">
           <url>file://$PROJECT_DIR$/authprocess.php</url>
-          <line>39</line>
+          <line>40</line>
           <option name="timeStamp" value="1" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="php">
