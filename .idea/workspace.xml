@@ -3,10 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="8dfc4df3-34f6-4b3c-a44e-96fcb3aaa1d6" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Admin/reminderprocessor.php" beforeDir="false" afterPath="$PROJECT_DIR$/Admin/reminderprocessor.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Admin/reminders.php" beforeDir="false" afterPath="$PROJECT_DIR$/Admin/reminders.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Admin/sendreminder.php" beforeDir="false" afterPath="$PROJECT_DIR$/Admin/sendreminder.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/authprocess.php" beforeDir="false" afterPath="$PROJECT_DIR$/authprocess.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -81,7 +77,9 @@
       <workItem from="1707798338160" duration="1251000" />
       <workItem from="1707852370230" duration="518000" />
       <workItem from="1707856811941" duration="215000" />
-      <workItem from="1707893974600" duration="440000" />
+      <workItem from="1707893974600" duration="1124000" />
+      <workItem from="1707961349293" duration="384000" />
+      <workItem from="1708069417784" duration="1776000" />
     </task>
     <servers />
   </component>
