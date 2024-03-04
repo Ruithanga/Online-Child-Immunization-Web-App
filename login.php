@@ -27,6 +27,7 @@ session_start();?>
         <h2>E-Vaccination System</h2>
         <img src="images/syrige.jpg" alt="Profile Image">
 
+        <p>Don't have an account<a href="register.php"> Register Now</a></p>
         <form id="loginForm" action="authprocess.php" method="post" onsubmit="return validateForm()">
 
             <label for="email">Email:</label>
@@ -35,11 +36,11 @@ session_start();?>
             <label for="password">Password:</label>
             <input type="password" id="password" name="password" required>
 
+            <button type="submit" name="login" class="my-2 w-100">Login</button>
             <div class="form-links">
-                <a href="#">Don't have an account</a> | <a href="register.php">Register</a>
+                <p>Forget password <a href="forgetpassword.php">Click here to reset</a></p>
             </div>
 
-            <button type="submit" name="login">Login</button>
         </form>
     </div>
 

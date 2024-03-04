@@ -68,29 +68,76 @@ if(!isset($_SESSION['user_id'])){
     ?>
 
 </div>
+<<<<<<< HEAD
 <div class="contend_mid d-flex flex-column ">
+=======
+        <div class="contend_mid d-flex flex-column ">
+>>>>>>> 3b46e238a6065b10537c235dbb94acc5b6771cfd
         <div class="my-3 d-flex justify-content-center">
             <div class="m-3">
                 <a href= "Child/index.php">
                     <div class="link  text-center">
+<<<<<<< HEAD
                         <img src="../images/avatar.jpg" />
+=======
+                        <img src="/images/avatar.jpg" />
+>>>>>>> 3b46e238a6065b10537c235dbb94acc5b6771cfd
                         <br>Child Details</div>
                 </a>
             </div>
             <div class="m-3">
                 <a href= "vaccine/index.php">
+<<<<<<< HEAD
                     <div class="link  text-center"><img src="../images/avatar.jpg" />
+=======
+                    <div class="link  text-center"><img src="/images/avatar.jpg" />
+>>>>>>> 3b46e238a6065b10537c235dbb94acc5b6771cfd
                         <br>Add Vaccine</div>
                 </a>
             </div>
         </div>
            <div class="my-3 mx-3 d-flex justify-content-center">
                <a href= "vaccine/schedules.php">
+<<<<<<< HEAD
                    <div class="link text-center"><img src="../images/avatar.jpg" />
+=======
+                   <div class="link text-center"><img src="/images/avatar.jpg" />
+>>>>>>> 3b46e238a6065b10537c235dbb94acc5b6771cfd
                        <br>Schedules
                    </div>
                </a>
            </div>
         </div>
+<<<<<<< HEAD
+=======
+<style>
+
+    /*body {*/
+    /*    font-family: 'Arial', sans-serif;*/
+    /*    background-size: cover;*/
+    /*    position: relative;*/
+    /*    background-color: #f4f4f4;*/
+    /*    background-image: url('../images/syrige2.jpg');*/
+    /*}*/
+    .link {
+
+        box-shadow: 6px 6px;
+        color: white;
+        background: #1A5276;
+        padding: 35px;
+        font-size: 23px;
+        border-radius: 20px;
+        width: 200px;
+        height: 200px;
+    }
+
+    .link img {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        margin-bottom: 10px;
+    }
+</style>
+>>>>>>> 3b46e238a6065b10537c235dbb94acc5b6771cfd
 </body>
 </html>
