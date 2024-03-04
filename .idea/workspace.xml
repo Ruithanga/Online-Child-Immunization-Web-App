@@ -2,7 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8dfc4df3-34f6-4b3c-a44e-96fcb3aaa1d6" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/forgetpassword.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resetpassword.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resetpasswordprocessor.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Admin/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/Admin/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/authprocess.php" beforeDir="false" afterPath="$PROJECT_DIR$/authprocess.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/login.php" beforeDir="false" afterPath="$PROJECT_DIR$/login.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -80,6 +86,17 @@
       <workItem from="1707893974600" duration="1124000" />
       <workItem from="1707961349293" duration="384000" />
       <workItem from="1708069417784" duration="1776000" />
+      <workItem from="1708396519742" duration="3957000" />
+      <workItem from="1708500871703" duration="452000" />
+      <workItem from="1708587757671" duration="2795000" />
+      <workItem from="1708655879638" duration="450000" />
+      <workItem from="1708800304702" duration="1006000" />
+      <workItem from="1708837594417" duration="219000" />
+      <workItem from="1708925087418" duration="1623000" />
+      <workItem from="1709007158848" duration="90000" />
+      <workItem from="1709293483068" duration="1911000" />
+      <workItem from="1709433455253" duration="4555000" />
+      <workItem from="1709534423099" duration="327000" />
     </task>
     <servers />
   </component>

@@ -31,43 +31,49 @@ if(!isset($_SESSION['user_id'])){
     ?>
 
 </div>
-
-
-        <a href= "Child/index.php"><div class="link">
-                <img src="/images/avatar.jpg" />
-                <br>Child Details</div>
-        </a>
-
-        <a href= "vaccine/index.php">
-            <div class="link"><img src="/images/avatar.jpg" />
-                <br>Add Vaccine</div>
-        </a>
-        <a href= "vaccine/schedules.php">
-            <div class="link"><img src="/images/avatar.jpg" />
-                <br>Schedules
+        <div class="contend_mid d-flex flex-column ">
+        <div class="my-3 d-flex justify-content-center">
+            <div class="m-3">
+                <a href= "Child/index.php">
+                    <div class="link  text-center">
+                        <img src="/images/avatar.jpg" />
+                        <br>Child Details</div>
+                </a>
             </div>
-        </a>
+            <div class="m-3">
+                <a href= "vaccine/index.php">
+                    <div class="link  text-center"><img src="/images/avatar.jpg" />
+                        <br>Add Vaccine</div>
+                </a>
+            </div>
+        </div>
+           <div class="my-3 mx-3 d-flex justify-content-center">
+               <a href= "vaccine/schedules.php">
+                   <div class="link text-center"><img src="/images/avatar.jpg" />
+                       <br>Schedules
+                   </div>
+               </a>
+           </div>
+        </div>
 <style>
-    body {
-        font-family: 'Arial', sans-serif;
-        background-size: cover;
-        position: relative;
-        background-color: #f4f4f4;
-        background-image: url('../images/syrige2.jpg');
-    }
+
+    /*body {*/
+    /*    font-family: 'Arial', sans-serif;*/
+    /*    background-size: cover;*/
+    /*    position: relative;*/
+    /*    background-color: #f4f4f4;*/
+    /*    background-image: url('../images/syrige2.jpg');*/
+    /*}*/
     .link {
-        display: inline-block;
+
         box-shadow: 6px 6px;
         color: white;
         background: #1A5276;
         padding: 35px;
-        text-align: center;
-        vertical-align: middle;
         font-size: 23px;
         border-radius: 20px;
-        width: 15%;
-        height: 150px;
-        margin: 10px;
+        width: 200px;
+        height: 200px;
     }
 
     .link img {
