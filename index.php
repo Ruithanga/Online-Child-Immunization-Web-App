@@ -8,45 +8,68 @@ session_start();
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ONLINE POST_NATAL CARE</title>
 
-    <link rel="stylesheet" href="Home.css">
-
-    <link rel="stylesheet" href="/css/style.css">
-    <script src="/js/main.js"></script>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/main.js"></script>
 </head>
 <body>
 <div class="">
     <?php include'header.php'; ?>
 </div>
-<div class="wrapper">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ONLINE POST_NATAL CARE</title>
+<!--    <link rel="stylesheet" href="Home.css">-->
+</head>
+<body>
+<style>
+.image img {
+    width: 100%;
+    min-width: 200px;
+    float: right;
+    max-width: 300px; /* Adjust the maximum width as needed */
+}
 
-    <div class="welcome-message">
-        <h1>Welcome to Our Child Immunization System</h1>
-        <p>Ensuring the Health and Well-being of Every Child</p>
-    </div>
+.main-content{
+    background-color: #007bff;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+.side{
+    padding: 2rem;
+    color: white;
+    font-size: 19px;
+}
+</style>
 
-    <div class="image">
-        <img src="images/baby.png" alt="Vaccination Image">
-    </div>
+   <div  class="main-content">
+       <div class="welcome-message">
+            <div class="side">
+                <div style="" class="">
+                    <h4>ONE TIME VACCINATION MATTERS</h4>
+                </div>
+                <div style="margin-top: 9rem;display: flex;flex-direction: row;justify-content: right;" class="">
+                   <div class=""> <p>Welcome to Our Child Immunization System</p>
+                       <p>Ensuring the Health and Well-being of Every Child</p></div>
+                </div>
+                <div style="padding-left: 1rem; margin-top: 10rem;" class="paragraph">
+                    <p>For better protection, vaccination needs to occur</p>
+                    <p>on time or as close as possible to the due date.</p>
+                </div>
+            </div>
+       </div>
+       <div  class="image">
+           <img src="images/baby.png" alt="Vaccination Image">
+       </div>
+   </div>
 
-    <div class="heading">
-        <h1>ONE TIME VACCINATION MATTERS</h1>
-    </div>
+ 
 
-    <div class="paragraph">
-        <p>For better protection, vaccination needs to occur</p>
-        <p>on time or as close as possible to the due date.</p>
-    </div>
-</div>
 
-<script>
-    function redirectToLogin() {
-        window.location.href = "login.php";
-    }
 
-    function redirectToRegister() {
-        window.location.href = "register.php";
-    }
-</script>
+
 
 </body>
 </html>

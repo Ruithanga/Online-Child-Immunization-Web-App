@@ -12,9 +12,9 @@ if(!isset($_SESSION['user_id'])){
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Add Child Details</title>
-    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="../../css/style.css">
     <link rel="stylesheet" href="../../add_child.css">
-    <script src="/js/main.js"></script>
+    <script src="../../js/main.js"></script>
 </head>
 <body>
 <?php include '../../header.php'; ?>
@@ -88,7 +88,7 @@ if(!isset($_SESSION['user_id'])){
            <div class="modal-dialog">
                <div class="modal-content">
                    <div class="modal-header">
-                       <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
+                       <h1 class="modal-title fs-5" id="exampleModalLabel">Add Child Details</h1>
                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                    </div>
                    <div class="modal-body">

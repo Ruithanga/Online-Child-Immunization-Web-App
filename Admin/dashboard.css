@@ -1,0 +1,56 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-size: cover;
+    background-image: url('../images/syrige2.jpg');
+}
+.link {
+    
+    display: inline-block;
+    box-shadow: 6px 6px;
+    color: white;
+    background: #1A5276;
+    padding: 35px;
+    text-align: center;
+    vertical-align: middle;
+    font-size: 23px;
+    border-radius: 20px;
+    width: 15%;
+    height: 150px;
+    margin: 10px;
+}
+
+.btn {
+display: inline-block;
+box-shadow: 6px 6px;
+color: white;
+background: #1A5276;
+padding: 35px;
+text-align: center;
+vertical-align: middle;
+font-size: 23px;
+border-radius: 20px;
+width: 15%;
+height: 150px;
+margin: 10px;
+}
+
+.link img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+nav{
+    font-size: 20px;
+    background:blueviolet;
+    color: white;
+}
+
+ul li a{
+    padding: 10px 10px 10px 10px;
+    color: white;
+    text-decoration: none;
+}
+ul a:hover{
+    background: blue;
+}

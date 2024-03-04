@@ -7,7 +7,7 @@
     <title>Add Vaccine</title>
 </head>
 <body>
-    <Form method="Post"class="container"action="<?php" $_server['PHP_SELF'] ?>
+    <Form method="Post"class="container"action="<?php $_server['PHP_SELF'] ?>
         <div class="div">
             <a href="../../admin_dashboard.php"><img src="../../images/avatar.jpg" width="30" height="30"></a>
 

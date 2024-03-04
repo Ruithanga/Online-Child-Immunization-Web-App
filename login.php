@@ -8,8 +8,8 @@ session_start();?>
     <title>Login</title>
     <link rel="stylesheet" href="login.css">
 
-    <link rel="stylesheet" href="/css/style.css">
-    <script src="/js/main.js"></script>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/main.js"></script>
 </head>
 <body>
 <?php include 'header.php'; ?>

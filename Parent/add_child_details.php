@@ -10,15 +10,67 @@ if(!isset($_SESSION['user_id'])){
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Add Child Details</title>
-    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="../css/style.css">
 </head>
 <body>
 <style>
+    body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+   background-image: url(../../images/vacc.jpg);
+    
+}
+
+h2 {
+    color: #333;
+}
+
+form {
+    max-width: 400px;
+    margin: 20px auto;
+    background-color: #A9CCE3;;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    color: #333;
+}
+
+input,
+select,
+button {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    box-sizing: border-box;
+}
+
+input[type="date"] {
+    padding: 10px 5px;
+}
+
+button {
+    background-color: #1084c3;
+    color: #fff;
+    border: none;
+    padding: 12px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #1e4aba;
+}
+
     .main {
         width:20rem;
     }
 </style>
-    <?php include '../header.php'; ?>
+    <?php include '../header.php' ?>
 <div class="container mb-4  d-flex justify-content-center align-items-center">
     <div class="main">
 

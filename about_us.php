@@ -6,7 +6,7 @@
     <link rel="stylesheet" href="about.css">
     <title>About</title>
     <link rel="stylesheet" href="css/style.css">
-    <script src="js/main.js"></script>
+    <script src="../../js/main.js"></script>
 </head>
 <body>
 <style>

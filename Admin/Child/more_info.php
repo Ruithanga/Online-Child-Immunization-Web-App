@@ -30,7 +30,7 @@ foreach ($childsdetails as $childsdetail) {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Add Child Details</title>
-    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="../../css/style.css">
     <link rel="stylesheet" href="../../add_child.css">
     <script src="/js/main.js"></script>
 </head>

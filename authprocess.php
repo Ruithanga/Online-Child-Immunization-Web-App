@@ -2,7 +2,6 @@
 include 'connection.php';
 if(isset($_POST["register"])) {
 
-
     $userType = $_POST['userType'];
     $username = $_POST['username'];
     $email = $_POST['email'];
@@ -27,7 +26,7 @@ if(isset($_POST["register"])) {
         if ($count2 > 0) {
             session_start();
             $_SESSION['status'] = 'Email already exist use a new email';
-            header("location:auth/register.php");
+            header("location:register.php");
         }
         else {
             if ($password !== $c_password){
@@ -47,7 +46,7 @@ if(isset($_POST["register"])) {
                 else {
                     session_start();
                     $_SESSION['status'] = 'Something went wrong';
-                    header("location:auth/register.php");
+                    header("location:register.php");
                 }
             }
 
@@ -81,7 +80,7 @@ if (isset($_POST['login'])) {
             $_SESSION['username'] = $username;
             $_SESSION['user_id'] = $user_id;
             $_SESSION['status'] = "Welcome back $username;";
-            header("location:/Admin/index.php");
+            header("location:Admin/index.php");
         }
         else{
             session_start();
@@ -89,7 +88,7 @@ if (isset($_POST['login'])) {
             $_SESSION['username'] = $username;
             $_SESSION['user_id'] = $user_id;
             $_SESSION['status'] = "Welcome back $username;";
-            header("location:/Parent/index.php");
+            header("location:Parent/index.php");
         }
 
 
@@ -98,7 +97,7 @@ if (isset($_POST['login'])) {
     else {
         session_start();
         $_SESSION['status'] = "The credentials does not match";
-        header("Location:/auth/login.php");
+        header("Location:login.php");
     }
 }
 

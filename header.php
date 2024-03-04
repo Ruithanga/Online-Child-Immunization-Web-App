@@ -8,24 +8,24 @@
             <div class="">
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav list-unstyled">
-                <li><a href="/">Home</a></li>
-                <li><a href="/about_us.php">About Us</a></li>
+                <li><a href="/cis">Home</a></li>
+                <li><a href="about_us.php">About Us</a></li>
                 <?php
 
                 if(isset($_SESSION['user_id'])){
                    if(isset($_SESSION['user'])=='admin'){
-                       echo '<li><a href="/Admin/index.php">Dashboard</a></li>';
+                       echo '<li><a href="Admin/index.php">Dashboard</a></li>';
                    }
                    else{
-                       echo '<li><a href="/Parent/index.php">Dashboard</a></li>';
+                       echo '<li><a href="Parent/index.php">Dashboard</a></li>';
                    }
-                       echo '<li><a href="/profile.php">Profile</a></li>';
-                       echo '<li><a href="/logout.php">Logout</a></li>';
+                       echo '<li><a href="profile.php">Profile</a></li>';
+                       echo '<li><a href="logout.php">Logout</a></li>';
 
                 }
                 else {
-                    echo '<li><a href="/login.php">Login</a></li>';
-                    echo '<li><a href="/register.php">Register</a></li>';
+                    echo '<li><a href="login.php">Login</a></li>';
+                    echo '<li><a href="register.php">Register</a></li>';
                 }
                 ?>
 
