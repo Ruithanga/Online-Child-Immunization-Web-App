@@ -36,7 +36,7 @@
     <style>
         nav{
             font-size: 20px;
-            background:blueviolet;
+            background:#1A5276;
             color: white;
         }
 

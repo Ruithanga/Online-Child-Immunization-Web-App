@@ -17,8 +17,8 @@
             <label for="userType">I am a:</label>
             <select id="userType" name="userType" required>
                 <option value="" disabled selected>Select User Type</option>
-                <option value="health_Care_Provider">Healthcare Provider</option>
-                <option value="parent_Guardian">Parent/Guardian</option>
+                <option value="Health_Care_Provider">Healthcare Provider</option>
+                <option value="Parent_Guardian">Parent/Guardian</option>
             </select>
 
             <label for="username">Username:</label>

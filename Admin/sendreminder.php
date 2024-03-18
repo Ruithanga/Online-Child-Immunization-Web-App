@@ -7,15 +7,16 @@ $vaccine_id = $_GET['vaccine_id'] ;
 $period = $_GET['period'] ;
 $phone = $_GET['phone'] ;
 $child_id = $_GET['child_id'] ;
+$date = $_GET['date'] ;
 
-$curl = curl_init();
-$message ="We are reminding you that it is only one week remaining for your child immunization. Get prepared for it do not forget to .Your child's health is your wealth. Regards child's Immunization system.";
-$data = array(
-    'api_token' => $api_token,
-    'from' => $from,
-    'to' => $phone,
-    'message' => $message
-);
+    $curl = curl_init();
+    $message ="We are reminding you that  few days are remaining for your child immmunization. Get prepared for it do not forget it the date is on '.$date.'. Your childs health is your wealth. Regards childs Immunization system.";
+    $data = array(
+        'api_token' => $api_token,
+        'from' => $from,
+        'to' => $phone,
+        'message' => $message
+    );
 
 curl_setopt_array($curl, array(
     CURLOPT_URL => $CURLOPT_URL,

@@ -16,8 +16,7 @@ if(!isset($_SESSION['user_id'])){
     <script src="../js/main.js"></script>
 </head>
 <body>
-<div class="">
-    
+       
 <nav class="navbar text-white top-nav navbar-expand-lg">
         <div class="container-fluid d-flex flex-row justify-content-between">
             <a class="navbar-brand text-white" href="/">Child Immunization </a>
@@ -33,13 +32,13 @@ if(!isset($_SESSION['user_id'])){
 
                 if(isset($_SESSION['user_id'])){
                    if(isset($_SESSION['user'])=='admin'){
-                       echo '<li><a href="index.php">Dashboard</a></li>';
+                       echo '<li><a href="Admin/index.php">Dashboard</a></li>';
                    }
                    else{
                        echo '<li><a href="Parent/index.php">Dashboard</a></li>';
                    }
                        echo '<li><a href="profile.php">Profile</a></li>';
-                       echo '<li><a href="logout.php">Logout</a></li>';
+                       echo '<li><a href="../logout.php">Logout</a></li>';
 
                 }
                 else {
@@ -52,64 +51,42 @@ if(!isset($_SESSION['user_id'])){
         </div>
     </div>
 </nav>
+<?php
+       if(isset($_SESSION['status'])){
+           ?>
+           <div>
+               <p style="font-size: 23px; padding: 1rem; text-transform: uppercase;" class="text-white  bg-success p-2 text-center "><?php echo $_SESSION['status'] ?> !</p>
+           </div>
+           <?php
+           unset($_SESSION['status']);
+       }
+       ?>
 
-</div>
-
-<div class="">
-    <?php
-    if(isset($_SESSION['status'])){
-        ?>
-        <div>
-            <p style="font-size: 23px; background-color: #2ecc71;padding: 1rem; text-transform: uppercase;" class="text-white bg-danger btn-danger p-2"><?php echo $_SESSION['status']; ?> ?</p>
-        </div>
-        <?php
-        unset($_SESSION['status']);
-    }
-    ?>
-
-</div>
-<<<<<<< HEAD
 <div class="contend_mid d-flex flex-column ">
-=======
-        <div class="contend_mid d-flex flex-column ">
->>>>>>> 3b46e238a6065b10537c235dbb94acc5b6771cfd
-        <div class="my-3 d-flex justify-content-center">
+ <div class="my-3 d-flex justify-content-center">
             <div class="m-3">
                 <a href= "Child/index.php">
                     <div class="link  text-center">
-<<<<<<< HEAD
                         <img src="../images/avatar.jpg" />
-=======
-                        <img src="/images/avatar.jpg" />
->>>>>>> 3b46e238a6065b10537c235dbb94acc5b6771cfd
-                        <br>Child Details</div>
+               <br>Child Details</div>
                 </a>
             </div>
             <div class="m-3">
                 <a href= "vaccine/index.php">
-<<<<<<< HEAD
+
                     <div class="link  text-center"><img src="../images/avatar.jpg" />
-=======
-                    <div class="link  text-center"><img src="/images/avatar.jpg" />
->>>>>>> 3b46e238a6065b10537c235dbb94acc5b6771cfd
-                        <br>Add Vaccine</div>
+                  <br>Add Vaccine</div>
                 </a>
             </div>
         </div>
            <div class="my-3 mx-3 d-flex justify-content-center">
                <a href= "vaccine/schedules.php">
-<<<<<<< HEAD
                    <div class="link text-center"><img src="../images/avatar.jpg" />
-=======
-                   <div class="link text-center"><img src="/images/avatar.jpg" />
->>>>>>> 3b46e238a6065b10537c235dbb94acc5b6771cfd
                        <br>Schedules
                    </div>
                </a>
            </div>
         </div>
-<<<<<<< HEAD
-=======
 <style>
 
     /*body {*/
@@ -138,6 +115,5 @@ if(!isset($_SESSION['user_id'])){
         margin-bottom: 10px;
     }
 </style>
->>>>>>> 3b46e238a6065b10537c235dbb94acc5b6771cfd
 </body>
 </html>

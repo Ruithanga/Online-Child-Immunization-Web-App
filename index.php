@@ -26,7 +26,8 @@ session_start();
 <body>
 <style>
 .image img {
-    width: 100%;
+    height: 200px;
+    width: auto;
     min-width: 200px;
     float: right;
     max-width: 300px; /* Adjust the maximum width as needed */
@@ -61,7 +62,7 @@ session_start();
             </div>
        </div>
        <div  class="image">
-           <img src="images/baby.png" alt="Vaccination Image">
+           <img src="images/baby 2.png" alt="Vaccination Image">
        </div>
    </div>
 

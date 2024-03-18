@@ -18,7 +18,7 @@ if(!isset($_SESSION['user_id'])){
     font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 0;
-   background-image: url(../../images/vacc.jpg);
+   background-image: url(../images/syrige4.jpg);
     
 }
 

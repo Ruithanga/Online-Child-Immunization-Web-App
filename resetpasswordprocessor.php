@@ -6,7 +6,7 @@ session_start();
 
 if (isset($_POST['forgetpassword'])) {
     $email = $_POST['email'];
-    $otp=rand();
+    $otp=rand(999,10000);
     $checkemail="select * from c_users where email='$email'";
     $checkemail_run=mysqli_query($conn,$checkemail);
     $count=mysqli_num_rows($checkemail_run);
@@ -38,19 +38,18 @@ if (isset($_POST['forgetpassword'])) {
             CURLOPT_CUSTOMREQUEST => 'POST',
             CURLOPT_POSTFIELDS => http_build_query($data),
         ));
-        curl_close($curl);
         $response = curl_exec($curl);
-
+       
         $data = json_decode($response, true);
-
+        curl_close($curl);
         $status = $data['status'];
-
-        if($status == 'success'){
+    
+         if($status == 'success'){
             $otp="update c_users set otp='$otp' where email='$email'";
             $otp_run=mysqli_query($conn,$otp);
             if($otp_run){
                 session_start();
-                $_SESSION['status'] = "Open you email and to reset the password?";
+                $_SESSION['status'] = "Chek your phone for otp?";
                 header("Location: resetpassword.php?email=$email");
                 }
         }
